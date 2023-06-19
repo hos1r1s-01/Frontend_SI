@@ -13,6 +13,7 @@ import { ContatoComponent } from './pages/contato/contato.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
 import { BoxLoginComponent } from './sharepage/box-login/box-login.component';
+import { BoxCadastroComponent } from './sharepage/box-cadastro/box-cadastro.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BoxLoginComponent } from './sharepage/box-login/box-login.component';
     ContatoComponent,
     FaqComponent,
     SobreNosComponent,
-    BoxLoginComponent
+    BoxLoginComponent,
+    BoxCadastroComponent
   ],
   imports: [
     BrowserModule,
