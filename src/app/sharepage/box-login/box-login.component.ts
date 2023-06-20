@@ -1,19 +1,13 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core';
-=======
 import { Component, OnInit } from '@angular/core';
 import { ServicoLogin } from 'src/app/services/servico-login';
-import  {  FormBuilder,  FormGroup  }  from  '@angular/forms';
->>>>>>> 5d05e58 (v1.2-notebook)
+import  {  FormBuilder,  FormGroup, Validators  }  from  '@angular/forms';
+import { Validator } from '@angular/forms';
 
 @Component({
   selector: 'app-box-login',
   templateUrl: './box-login.component.html',
   styleUrls: ['./box-login.component.css']
 })
-<<<<<<< HEAD
-export class BoxLoginComponent {
-=======
 export class BoxLoginComponent implements OnInit {
   
   formLogin!: FormGroup;
@@ -27,7 +21,7 @@ export class BoxLoginComponent implements OnInit {
 
   createForm(login: ServicoLogin){
     this.formLogin = this.formbuilder.group({
-      email: [login.email],
+      email: [login.email, [Validators.required, Validators.email]],
       senha: [login.senha]
     })
   }
@@ -35,6 +29,5 @@ export class BoxLoginComponent implements OnInit {
   onSubmit(){
     console.log(this.formLogin.value);
   }
->>>>>>> 5d05e58 (v1.2-notebook)
 
 }

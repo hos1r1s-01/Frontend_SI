@@ -91,3 +91,11 @@ body {
   text-align: center;
   padding-top: 2px;
 }
+
+.aviso {
+  font-family: "Inter", sans-serif;
+  color: rgb(145, 71, 71);
+  padding-left: 70px;
+  font-size: 60%;
+  padding-top: 8px;
+}
