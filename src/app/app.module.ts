@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+<<<<<<< HEAD
+=======
+import { ReactiveFormsModule } from '@angular/forms';
+>>>>>>> 5d05e58 (v1.2-notebook)
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,7 +36,12 @@ import { BoxCadastroComponent } from './sharepage/box-cadastro/box-cadastro.comp
   ],
   imports: [
     BrowserModule,
+<<<<<<< HEAD
     AppRoutingModule
+=======
+    AppRoutingModule,
+    ReactiveFormsModule
+>>>>>>> 5d05e58 (v1.2-notebook)
   ],
   providers: [],
   bootstrap: [AppComponent]

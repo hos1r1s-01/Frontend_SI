@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+<<<<<<< HEAD
+=======
+  isPrimeiroLogin(): boolean {
+    return true;
+  }
+
+>>>>>>> 5d05e58 (v1.2-notebook)
 }

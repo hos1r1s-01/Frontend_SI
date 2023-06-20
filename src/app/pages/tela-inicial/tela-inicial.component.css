@@ -1,0 +1,33 @@
+.titulo{color: white;
+    background-color: #100f11;
+    display:flex;
+    align-items: center;
+    height: 10vh;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid grey;
+}
+.corpo{color: blue;
+    background-color: #060d32;
+    display:flex ;
+    align-items: center;
+    height: 80vh;
+    justify-content: center;}
+.back{
+    background-color: #060d32;
+}
+.direcionar{
+    background: none;
+    color: white;
+    outline: 0px !important;
+    outline-offset: 0px !important;
+    border: none !important;
+    font-size: 35px;
+    text-decoration: none !important;
+    font-family: "Arial";
+}
+.unb_imagem{
+    height: 10%;
+    width: 10%;
+}
