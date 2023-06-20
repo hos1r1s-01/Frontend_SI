@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicoLogin } from 'src/app/services/servico-login';
-import  {  FormBuilder,  FormGroup  }  from  '@angular/forms';
+import  {  FormBuilder,  FormGroup, Validators  }  from  '@angular/forms';
+import { Validator } from '@angular/forms';
 
 @Component({
   selector: 'app-box-login',
@@ -20,7 +21,7 @@ export class BoxLoginComponent implements OnInit {
 
   createForm(login: ServicoLogin){
     this.formLogin = this.formbuilder.group({
-      email: [login.email],
+      email: [login.email, [Validators.required, Validators.email]],
       senha: [login.senha]
     })
   }

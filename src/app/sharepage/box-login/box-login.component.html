@@ -13,6 +13,12 @@
     <div class="titulo">UnBHelp</div>
     <form id="formulario-login" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
       <input class="usuario" type="text" placeholder="Email da UnB" formControlName="email" >
+      <div *ngIf="formLogin.get('email')?.errors?.['email'] && formLogin.get('email')?.touched" class="aviso">
+        <p>Formato de E-mail inválido.</p>
+      </div>
+      <div *ngIf="formLogin.get('email')?.errors?.['required'] && formLogin.get('email')?.touched" class="aviso">
+        <p>Campo obrigatório.</p>
+      </div>
       <input class="senha" type="password" placeholder="Senha" formControlName="senha" >
       <button class="botao" type="submit">
         <p class="acessar">Acessar</p>
