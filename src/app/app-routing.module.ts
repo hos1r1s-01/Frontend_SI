@@ -16,6 +16,14 @@ const routes: Routes = [
   {path:'contato', component:ContatoComponent},
   {path:'faq', component:FaqComponent},
   {path:'sobre-nos', component:SobreNosComponent}
+  // {path:'feedback/disciplina', component:}
+  // {path:'feedback/professor', component:}
+  //{path: 'consultar/disciplina', component:}
+  //{path:'consultar/professor', component:}
+  //{path:'pretencao/', component:}
+  // {path:'pretencao/resultado', component:}
+
+
 ];
 
 @NgModule({
