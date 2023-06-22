@@ -1,0 +1,43 @@
+<head>
+  <link rel="stylesheet" href="box-cadastro-disciplina.component.css" />
+</head>
+
+<body>
+  <div class="hitbox">
+    <h1 class="titulo">Feedback de Disciplina</h1>
+    <div class="inputs">
+      <input class="nome" type="text" placeholder="Nome" />
+      <input class="semestre" type="text" placeholder="Ano e Semestre" />
+      <input
+        class="texto"
+        type="textarea"
+        placeholder="Informe aqui os assuntos abordados. Dica: Dê uma olhada na ementa."
+      />
+    </div>
+    <div class="lembrete">
+      Lembre-se: Esse é um campo que vai auxiliar demais pessoas.
+    </div>
+    <div class="avaliacao">Avaliação geral:</div>
+    <input
+      class="estrela"
+      type="range"
+      id="vol"
+      name="vol"
+      value="0"
+      min="0"
+      max="5"
+      step="1"
+      oninput="display.value=value"
+      onchange="display.value=value"
+    />
+    <input
+      class="texto-estrela"
+      type="text"
+      id="display"
+      value="0"
+      oninput="vol.value=value"
+      onchange="vol.value=value"
+    />
+    <button class="botao" type="submit">Continuar</button>
+  </div>
+</body>

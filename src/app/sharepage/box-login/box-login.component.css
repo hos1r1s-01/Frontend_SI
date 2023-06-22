@@ -78,12 +78,22 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.botao:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 .cadastrar {
   font-family: "Inter", sans-serif;
   color: white;
   font-size: 60%;
   text-align: center;
   padding-top: 2px;
+}
+
+.cadastrar:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .aviso {
