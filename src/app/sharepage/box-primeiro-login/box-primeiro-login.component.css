@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
 
 body {
-  width: 321px;
+  width: 365px;
   height: 330px;
   display: block;
   margin: 0 auto;
@@ -17,19 +17,19 @@ body {
 .hitbox {
   background-color: #0d0a1a;
   border-radius: 40px;
-  width: 321px;
-  height: 287px;
+  width: 365px;
+  height: 304px;
 }
 
 .titulo {
   color: white;
   font-family: "Inter", sans-serif;
-  font-size: 170%;
+  font-size: 70%;
   padding-top: 60px;
   text-align: center;
 }
 
-.usuario {
+.matricula {
   font-family: "Inter", sans-serif;
   font-size: 70%;
   background-color: rgba(162, 157, 181, 0.5);
@@ -44,11 +44,26 @@ body {
   margin: 20px auto 0;
 }
 
-.usuario::placeholder {
+.matricula::placeholder {
   color: white;
 }
 
-.senha {
+.curso {
+    font-family: "Inter", sans-serif;
+    font-size: 70%;
+    background-color: rgba(162, 157, 181, 0.5);
+    outline: none;
+    color: white;
+    border-style: none;
+    border-radius: 4px;
+    padding-left: 5px;
+    width: 199px;
+    height: 27px;
+    display: block;
+    margin: 10px auto;
+}
+
+.semestre-atual {
   font-family: "Inter", sans-serif;
   font-size: 70%;
   background-color: rgba(162, 157, 181, 0.5);
@@ -63,7 +78,7 @@ body {
   margin: 10px auto;
 }
 
-.senha::placeholder {
+.semestre-atual::placeholder {
   color: white;
 }
 
@@ -76,14 +91,6 @@ body {
   display: block;
   margin: 10px auto;
   font-family: "Inter", sans-serif;
-}
-
-.cadastrar {
-  font-family: "Inter", sans-serif;
-  color: white;
-  font-size: 60%;
-  text-align: center;
-  padding-top: 2px;
 }
 
 .aviso {
