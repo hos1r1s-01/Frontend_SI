@@ -1,0 +1,39 @@
+.titulo{color: white;
+    background-color: #100f11;
+    display:flex;
+    align-items: center;
+    height: 10vh;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 2px solid black;
+    /* border-radius: 4px; */
+    /* border: 1px solid grey; */
+}
+.fundo{
+    background-color: #19095A;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    width: 90%;
+    border-radius: 10px;
+    background-color: #060d3292;
+    color: white;
+    margin-top: 2%;
+    
+}
+.titulo_card{
+    background-color: #060d32fe ;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.corpo{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
