@@ -9,7 +9,7 @@ import { FaqComponent } from './pages/faq/faq.component';
 import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
 
 const routes: Routes = [
-  {path:'', component:LoginComponent},
+  {path:'', component:PrimeiroLoginComponent},
   {path:'cadastro-usuario', component:CadastroUsuarioComponent},
   {path:'primeiro-login', component:PrimeiroLoginComponent},
   {path:'tela-inicial', component:TelaInicialComponent},
