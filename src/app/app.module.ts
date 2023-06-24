@@ -19,7 +19,6 @@ import { BoxPrimeiroLoginComponent } from './sharepage/box-primeiro-login/box-pr
 import { BoxCadastroDisciplinaComponent } from './sharepage/box-cadastro-disciplina/box-cadastro-disciplina.component';
 import { BoxCadastroProfessorComponent } from './sharepage/box-cadastro-professor/box-cadastro-professor.component';
 import { BoxSugestaoComponent } from './sharepage/box-sugestao/box-sugestao.component';
-import { BackgroundAzulComponent } from './sharepage/background-azul/background-azul.component';
 
 @NgModule({
   declarations: [
@@ -38,8 +37,7 @@ import { BackgroundAzulComponent } from './sharepage/background-azul/background-
     BoxPrimeiroLoginComponent,
     BoxCadastroDisciplinaComponent,
     BoxCadastroProfessorComponent,
-    BoxSugestaoComponent,
-    BackgroundAzulComponent
+    BoxSugestaoComponent
   ],
   imports: [
     BrowserModule,
