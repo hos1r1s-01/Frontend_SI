@@ -5,27 +5,33 @@
 <body>
     <div class="hitbox">
         <h1 class="titulo">Feedback de Professor</h1>
-        <div class="inputs">
-            <input class="nome" type="text" placeholder="Nome" />
-            <input class="sobrenome" type="text" placeholder="Sobrenome" />
-            <div class="checkbox">
-                <input type="checkbox" class="box-chamada" name="chamada" value="0">
-                <label for="chamada" class="chamada">Faz chamada?</label>
-                <input type="checkbox" class="box-trabalho" name="trabalho" value="1">
-                <label for="trabalho" class="trabalho">Há trabalhos?</label>
-                <input type="checkbox" class="box-prova" name="prova" value="2">
-                <label for="prova" class="prova">Há provas?</label>
+        <form [formGroup]="formCadastroProfessor" (ngSubmit)="onSubmit()">
+            <div class="inputs">
+                <input class="nome" type="text" placeholder="Nome" formControlName="nome" />
+                <input class="sobrenome" type="text" placeholder="Sobrenome" formControlName="sobrenome"/>
+                <div class="checkbox">
+                    <input type="checkbox" class="box-chamada" name="chamada" formControlName="chamada">
+                    <label for="chamada" class="chamada">Faz chamada?</label>
+                    <input type="checkbox" class="box-trabalho" name="trabalho" formControlName="trabalho">
+                    <label for="trabalho" class="trabalho">Há trabalhos?</label>
+                    <input type="checkbox" class="box-prova" name="prova" formControlName="prova">
+                    <label for="prova" class="prova">Há provas?</label>
+                </div>
+                <div class="linha-avaliacao">
+                    <div class="avaliacao">Avaliação geral:</div>
+                    <select class="pontuacao" formControlName="avaliacao">
+                        <option class="opcao" value="" disabled selected>--Nota--</option>
+                        <option class="opcao" value="1">1 estrela</option>
+                        <option class="opcao" value="2">2 estrelas</option>
+                        <option class="opcao" value="3">3 estrelas</option>
+                        <option class="opcao" value="4">4 estrelas</option>
+                        <option class="opcao" value="5">5 estrelas</option>
+                    </select>
+                </div>
+                <textarea class="texto" formControlName="explicacao"
+                    placeholder="Explique como funciona a metodologia, como funciona a avaliação, comente sobre a didática! Sinta-se livre."></textarea>
             </div>
-            <div class="linha-avaliacao">
-                <div class="avaliacao">Avaliação geral:</div>
-                <input class="estrela" type="range" id="vol" name="vol" value="0" min="0" max="5" step="1"
-                    oninput="display.value=value" onchange="display.value=value" />
-                <input class="texto-estrela" type="text" id="display" value="0" oninput="vol.value=value"
-                    onchange="vol.value=value" />
-            </div>
-            <textarea class="texto"
-                placeholder="Explique como funciona a metodologia, como funciona a avaliação, comente sobre a didática! Sinta-se livre."></textarea>
-        </div>
-        <button class="botao" type="submit">Continuar</button>
+            <button class="botao" type="submit">Continuar</button>
+        </form>
     </div>
 </body>

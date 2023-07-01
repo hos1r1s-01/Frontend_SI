@@ -126,24 +126,19 @@
 
 .avaliacao {
     font-family: "Inter", sans-serif;
-    font-size: 70%;
+    font-size: 80%;
     font-weight: 500;
     color: white;
 }
 
-.estrela {
-    width: 80px;
-    margin-left: 10px;
-}
-
-.texto-estrela {
+.pontuacao {
     font-family: "Inter", sans-serif;
-    font-weight: 700;
-    color: white;
-    background-color: transparent;
-    width: 10px;
+    color: black;
+    background-color: #85809B;
     border: none;
+    border-radius: 4px;
     margin-left: 10px;
+    outline: none;
 }
 
 .botao {

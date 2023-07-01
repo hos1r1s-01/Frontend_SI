@@ -14,23 +14,27 @@
       Sua primeira vez aqui? Seja bem vindo!<br />
       Vamos precisar de alguns dados.
     </div>
-    <label class="inputs">
-      <input
-        class="matricula"
-        type="text"
-        placeholder="Matrícula - Ex: 200018000"
-      />
-      <select class="curso">
-        <option value="" disabled selected>--Curso--</option>
-        <option value="1">Ciências da Computação</option>
-        <option value="2">Computação - Licenciatura</option>
-      </select>
-      <input
-        class="semestre-atual"
-        type="text"
-        placeholder="Semestre Atual - Ex: 2021.1"
-      />
-    </label>
-    <button class="botao" type="submit">Finalizar</button>
+    <form [formGroup]="formPrimeiroLogin" (ngSubmit)="onSubmit()">
+      <label class="inputs">
+        <input
+          class="matricula"
+          type="text"
+          placeholder="Matrícula - Ex: 200018000"
+          formControlName="matricula"
+        />
+        <select class="curso" formControlName="curso">
+          <option value="" disabled selected>--Curso--</option>
+          <option value="CIC">Ciências da Computação</option>
+          <option value="LIC">Computação - Licenciatura</option>
+        </select>
+        <input
+          class="semestre-atual"
+          type="text"
+          placeholder="Semestre Atual - Ex: 2021.1"
+          formControlName="semestre"
+        />
+      </label>
+      <button class="botao" type="submit">Finalizar</button>
+    </form>
   </main>
 </body>

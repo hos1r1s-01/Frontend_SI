@@ -11,13 +11,15 @@
   />
   <main class="hitbox">
     <div class="titulo">UnBHelp</div>
-    <input class="nome" type="text" placeholder="Nome Completo" />
-    <input class="email" type="text" placeholder="E-mail Institucional" />
-    <input class="senha" type="password" placeholder="Digite sua senha" />
-    <input class="senha" type="password" placeholder="Confirme sua senha" />
-    <button class="botao">
-      <p class="cadastrar">Cadastrar</p>
-    </button>
+    <form [formGroup]="formCadastroUser" (ngSubmit)="onSubmit()">
+      <input class="nome" type="text" placeholder="Nome Completo" formControlName="nome">
+      <input class="email" type="text" placeholder="E-mail Institucional" formControlName="email">
+      <input class="senha" type="password" placeholder="Digite sua senha" formControlName="senha">
+      <input class="senha" type="password" placeholder="Confirme sua senha" formControlName="senhaConfirmada">
+      <button class="botao">
+        <p class="cadastrar">Cadastrar</p>
+      </button>
+    </form>
     <div class="conta-existente">Já possui cadastro? Clique aqui</div>
   </main>
 </body>

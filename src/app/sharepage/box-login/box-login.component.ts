@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ServicoLogin } from 'src/app/services/servico-login';
+import { Login } from 'src/app/forms/login';
 import  {  FormBuilder,  FormGroup, Validators  }  from  '@angular/forms';
 import { Validator } from '@angular/forms';
 
@@ -15,11 +15,11 @@ export class BoxLoginComponent implements OnInit {
   constructor(private formbuilder: FormBuilder) {}
 
   ngOnInit(): void {
-    this.createForm(new ServicoLogin())
+    this.createForm(new Login())
     
   }
 
-  createForm(login: ServicoLogin){
+  createForm(login: Login){
     this.formLogin = this.formbuilder.group({
       email: [login.email, [Validators.required, Validators.email]],
       senha: [login.senha]
@@ -29,5 +29,6 @@ export class BoxLoginComponent implements OnInit {
   onSubmit(){
     console.log(this.formLogin.value);
   }
+  
 
 }
