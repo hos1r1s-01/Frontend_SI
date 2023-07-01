@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CadastroUsuario } from 'src/app/forms/cadastro-usuario';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-box-cadastro',
@@ -11,7 +12,7 @@ export class BoxCadastroComponent implements OnInit {
 
   formCadastroUser!: FormGroup;
 
-  constructor(private formbuilder: FormBuilder) {}
+  constructor(private formbuilder: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.createForm(new CadastroUsuario)
@@ -27,7 +28,8 @@ export class BoxCadastroComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.formCadastroUser.value)
+    console.log(this.formCadastroUser.value);
+    this.router.navigateByUrl("primeiro-login");
   }
 
 }

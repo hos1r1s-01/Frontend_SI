@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Login } from 'src/app/forms/login';
 import  {  FormBuilder,  FormGroup, Validators  }  from  '@angular/forms';
-import { Validator } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-box-login',
@@ -12,7 +12,7 @@ export class BoxLoginComponent implements OnInit {
   
   formLogin!: FormGroup;
 
-  constructor(private formbuilder: FormBuilder) {}
+  constructor(private formbuilder: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.createForm(new Login())
@@ -28,6 +28,7 @@ export class BoxLoginComponent implements OnInit {
 
   onSubmit(){
     console.log(this.formLogin.value);
+    this.router.navigateByUrl("tela-inicial");
   }
   
 

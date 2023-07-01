@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CadastroDisciplina } from 'src/app/forms/cadastro-disciplina';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-box-cadastro-disciplina',
@@ -11,7 +12,7 @@ export class BoxCadastroDisciplinaComponent implements OnInit {
 
   formCadastroDisciplina!: FormGroup;
 
-  constructor(private formbuilder: FormBuilder) {}
+  constructor(private formbuilder: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.createForm(new CadastroDisciplina)
@@ -27,7 +28,8 @@ export class BoxCadastroDisciplinaComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.formCadastroDisciplina.value)
+    console.log(this.formCadastroDisciplina.value);
+    this.router.navigateByUrl("feedback/professor");
   }
 
 }

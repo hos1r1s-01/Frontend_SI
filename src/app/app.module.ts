@@ -19,6 +19,12 @@ import { BoxPrimeiroLoginComponent } from './sharepage/box-primeiro-login/box-pr
 import { BoxCadastroDisciplinaComponent } from './sharepage/box-cadastro-disciplina/box-cadastro-disciplina.component';
 import { BoxCadastroProfessorComponent } from './sharepage/box-cadastro-professor/box-cadastro-professor.component';
 import { BoxSugestaoComponent } from './sharepage/box-sugestao/box-sugestao.component';
+import { TesteForComponent } from './sharepage/teste-for/teste-for.component';
+import { HeaderFeedProfessorComponent } from './sharepage/header-feed-professor/header-feed-professor.component';
+import { FeedbackProfessorComponent } from './pages/feedback-professor/feedback-professor.component';
+import { FeedbackDisciplinaComponent } from './pages/feedback-disciplina/feedback-disciplina.component';
+import { CadastroFeedbackProfessorComponent } from './pages/cadastro-feedback-professor/cadastro-feedback-professor.component';
+import { CadastroFeedbackDisciplinaComponent } from './pages/cadastro-feedback-disciplina/cadastro-feedback-disciplina.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +43,13 @@ import { BoxSugestaoComponent } from './sharepage/box-sugestao/box-sugestao.comp
     BoxPrimeiroLoginComponent,
     BoxCadastroDisciplinaComponent,
     BoxCadastroProfessorComponent,
-    BoxSugestaoComponent
+    BoxSugestaoComponent,
+    TesteForComponent,
+    HeaderFeedProfessorComponent,
+    FeedbackProfessorComponent,
+    FeedbackDisciplinaComponent,
+    CadastroFeedbackProfessorComponent,
+    CadastroFeedbackDisciplinaComponent
   ],
   imports: [
     BrowserModule,

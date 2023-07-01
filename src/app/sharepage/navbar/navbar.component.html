@@ -18,16 +18,16 @@
     <div class="dropdown">
       <a class="dropdown-button">FEEDBACK</a>
       <div class="dropdown-menu">
-        <a routerLink="" class="item-dropdown">CADASTRAR FEEDBACK</a>
-        <a routerLink="" class="item-dropdown">CONSULTA DE PROFESSOR</a>
-        <a routerLink="" class="item-dropdown">CONSULTA DE DISCIPLINA</a>
-        <a routerLink="" class="item-dropdown">PRETENSÃO</a>
+        <button (click)="onClickCadastrarFeedback()" class="item-dropdown">CADASTRAR FEEDBACK</button>
+        <button (click)="onClickConsultaProfessor()" class="item-dropdown">CONSULTA DE PROFESSOR</button>
+        <button (click)="onClickConsultaDisciplina()" class="item-dropdown">CONSULTA DE DISCIPLINA</button>
+        <button class="item-dropdown">PRETENSÃO</button>
       </div>
     </div>
     <ul class="itens-navbar">
-      <li><a routerLink="contato">CONTATOS</a></li>
-      <li><a routerLink="faq">F.A.Q</a></li>
-      <li><a routerLink="sobre-nos">SOBRE NÓS</a></li>
+      <li><button class="title" (click)="onClickContatos()">CONTATOS</button></li>
+      <li><button class="title" (click)="onClickFaq()">F.A.Q</button></li>
+      <li><button class="title" (click)="onClickSobreNos()">SOBRE NÓS</button></li>
     </ul>
   </nav>
 </body>

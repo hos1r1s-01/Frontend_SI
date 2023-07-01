@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.hitbox-dropdown {
+    width: 100%;
+    height: 84px;
+    background-color: #171617;
+}
+
+.professor {
+    font-family: "Inter", sans-serif;
+    font-size: 100%;
+    padding-left: 10px;
+    color: black;
+    background-color: #868295;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 268px;
+    height: 34px;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.disciplina {
+    font-family: "Inter", sans-serif;
+    font-size: 100%;
+    padding-left: 10px;
+    background-color: #868295;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 268px;
+    height: 34px;
+    margin-left: 100px;
+}
+
+.hitbox-checkbox {
+    width: 100%;
+    height: 100px;
+    background-color: #1E1E1E;
+}
+
+.feedback {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 230%;
+    color: white;
+    padding-top: 5px;
+    margin-left: 20px;   
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    background-color: #868295;
+    margin-top: 7px;
+    margin-left: 30px;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+}
+
+.titulo {
+    font-family: "Inter", sans-serif;
+    color: white;
+    margin-top: 9px;
+    margin-left: 10px;
+}
+
+.hitbox-feedback {
+    width: 100%;
+    height: 150px;
+    background-color: #1E1E1E;
+}
+
+.avatar{
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    position: absolute;
+    margin-top: 15px;
+}
+
+.user {
+    font-family: "Inter", sans-serif;
+    font-size: 130%;
+    font-weight: 300;
+    color: #868295;
+    margin-left: 120px;
+    position: absolute;
+}
+
+.box-feedback {
+    font-family: "Inter", sans-serif;
+    color: white;
+    width: 1050px;
+    height: 100px;
+    background-color: #1E1E60;
+    border-radius: 12px;
+    margin-left: 120px;
+    position: relative;
+    top: 30px;
+}

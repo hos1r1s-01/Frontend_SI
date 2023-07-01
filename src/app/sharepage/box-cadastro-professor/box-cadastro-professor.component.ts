@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CadastroProfessor } from 'src/app/forms/cadastro-professor';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-box-cadastro-professor',
@@ -11,7 +12,7 @@ export class BoxCadastroProfessorComponent implements OnInit{
   
   formCadastroProfessor!: FormGroup;
 
-  constructor(private formbuilder: FormBuilder) {}
+  constructor(private formbuilder: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.createForm(new CadastroProfessor)
@@ -30,6 +31,7 @@ export class BoxCadastroProfessorComponent implements OnInit{
   }
 
   onSubmit(){
-    console.log(this.formCadastroProfessor.value)
+    console.log(this.formCadastroProfessor.value);
+    this.router.navigateByUrl("tela-inicial");
   }
 }

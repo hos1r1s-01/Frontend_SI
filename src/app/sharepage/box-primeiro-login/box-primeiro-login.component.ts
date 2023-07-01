@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeiroLogin } from 'src/app/forms/primeiro-login';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-box-primeiro-login',
@@ -11,7 +12,7 @@ export class BoxPrimeiroLoginComponent implements OnInit {
 
   formPrimeiroLogin! : FormGroup;
 
-  constructor(private formbuilder: FormBuilder) {}
+  constructor(private formbuilder: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.createForm(new PrimeiroLogin())
@@ -26,7 +27,8 @@ export class BoxPrimeiroLoginComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.formPrimeiroLogin.value)
+    console.log(this.formPrimeiroLogin.value);
+    this.router.navigateByUrl("tela-inicial")
   }
 
 }
