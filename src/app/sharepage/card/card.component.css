@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 550px;
+  height: auto;
+  background-color: rgba(21, 12, 53, .8);
+  border-radius: 12px;
+  margin: 0 auto;
+  padding: 5px;
+  box-shadow: 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.titulo {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  background: none;
+}

@@ -1,33 +1,18 @@
-<head>
-  <link rel="stylesheet" href="navbar.component.css" />
-</head>
-
-<body>
-  <nav>
-    <div class="logo">
-      <h1>UnB Help</h1>
+<nav>
+  <h1 class="logo">UnB Help</h1>
+  <img class="avatar" id="avatar" src="https://cdn-icons-png.flaticon.com/512/147/147144.png" width="50" height="50"/>
+  <div class="dropdown">
+    <a class="dropdown-button">FEEDBACK</a>
+    <div class="dropdown-menu">
+      <button (click)="onClickCadastrarFeedback()" class="item-dropdown">CADASTRAR FEEDBACK</button>
+      <button (click)="onClickConsultaProfessor()" class="item-dropdown">CONSULTA DE PROFESSOR</button>
+      <button (click)="onClickConsultaDisciplina()" class="item-dropdown">CONSULTA DE DISCIPLINA</button>
+      <button class="item-dropdown">PRETENSÃO</button>
     </div>
-    <button class="avatar">
-      <img
-        id="avatar"
-        src="https://cdn-icons-png.flaticon.com/512/147/147144.png"
-        width="50"
-        height="50"
-      />
-    </button>
-    <div class="dropdown">
-      <a class="dropdown-button">FEEDBACK</a>
-      <div class="dropdown-menu">
-        <button (click)="onClickCadastrarFeedback()" class="item-dropdown">CADASTRAR FEEDBACK</button>
-        <button (click)="onClickConsultaProfessor()" class="item-dropdown">CONSULTA DE PROFESSOR</button>
-        <button (click)="onClickConsultaDisciplina()" class="item-dropdown">CONSULTA DE DISCIPLINA</button>
-        <button class="item-dropdown">PRETENSÃO</button>
-      </div>
-    </div>
-    <ul class="itens-navbar">
-      <li><button class="title" (click)="onClickContatos()">CONTATOS</button></li>
-      <li><button class="title" (click)="onClickFaq()">F.A.Q</button></li>
-      <li><button class="title" (click)="onClickSobreNos()">SOBRE NÓS</button></li>
-    </ul>
-  </nav>
-</body>
+  </div>
+  <ul class="itens-navbar">
+    <li><button class="title" (click)="onClickContatos()">CONTATOS</button></li>
+    <li><button class="title" (click)="onClickFaq()">F.A.Q</button></li>
+    <li><button class="title" (click)="onClickSobreNos()">SOBRE NÓS</button></li>
+  </ul>
+</nav>

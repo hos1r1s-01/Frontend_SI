@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body {
-  margin: 0;
-}
-
 nav {
   background-color: #100f11;
   height: 85px;
@@ -15,6 +11,7 @@ li {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   color: white;
+  background: none;
 }
 
 nav,
@@ -23,11 +20,16 @@ ul {
   flex-direction: row;
 }
 
+ul {
+  background: none;
+}
+
 .itens-navbar li {
   list-style: none;
   font-size: 90%;
   padding-top: 2px;
   padding-left: 18px;
+  background: none;
 }
 
 .itens-navbar li:hover {
@@ -38,10 +40,11 @@ ul {
 .itens-navbar li button {
   text-decoration: none;
   color: inherit;
+  background: none;
 }
 
 .title {
-  background-color: transparent;
+  background: none;
   border: none;
   font-size: 100%;
   font-weight: 900;
@@ -53,7 +56,7 @@ ul {
 }
 
 .avatar {
-  background-color: transparent;
+  background: none;
   border: none;
   position: absolute;
   align-items: center;
@@ -69,6 +72,7 @@ ul {
   width: 86px;
   margin-left: 20px;
   margin-top: 2px;
+  background: none;
 }
 
 .dropdown a {
@@ -129,7 +133,7 @@ ul {
   opacity: 0.8;
 }
 
-.dropdown-button:hover + .dropdown-menu { 
+.dropdown-button:hover + .dropdown-menu {
   display: flex;
   flex-direction: column;
 }

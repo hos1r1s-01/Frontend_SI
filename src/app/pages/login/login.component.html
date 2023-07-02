@@ -1,1 +1,15 @@
-<app-box-login></app-box-login>
+<div class="container">
+  <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/147/147144.png"/>
+  <div class="card">
+    <div class="titulo">UnBHelp</div>
+    <form id="formulario-login" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+      <input class="usuario" type="text" placeholder="Matricula" formControlName="matricula"/>
+      <span *ngIf="formLogin.get('matricula')?.errors?.['required'] && formLogin.get('matricula')?.touched" class="aviso">
+        Campo obrigatório.
+      </span>
+      <input class="senha" type="password" placeholder="Senha" formControlName="senha"/>
+      <button class="botao" type="submit" [disabled]="!formLogin.valid">Acessar</button>
+    </form>
+    <div class="cadastrar">Não possui conta? Cadastre-se aqui</div>
+  </div>
+</div>
