@@ -1,1 +1,14 @@
-<router-outlet></router-outlet>
+<div style="display: flex; flex-direction: column; height: 100%;">
+  <div *ngIf="router.url != '/auth' && router.url != '/cadastrar'">
+    <app-navbar></app-navbar>
+  </div>
+
+  <div style="height: 100%;">
+   <router-outlet></router-outlet>
+  </div>
+
+  <div *ngIf="router.url != '/auth' && router.url != '/cadastrar'">
+    <app-footer></app-footer>
+  </div>
+
+</div>

@@ -22,6 +22,7 @@ export class FeedbackService {
   }
 
   public getTodosFeedbacksDeProfessor(): Observable<any> {
+    console.log(`getTodosFeedbacksDeProfessor`)
     return this.http.get(`${environment.API}/professor`, {headers: this.getAuthorizationFromHeader()});
   }
 

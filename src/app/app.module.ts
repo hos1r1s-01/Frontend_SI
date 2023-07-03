@@ -12,10 +12,8 @@ import { TelaInicialComponent } from './pages/tela-inicial/tela-inicial.componen
 import { ContatoComponent } from './pages/contato/contato.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
-import { BoxCadastroComponent } from './sharepage/box-cadastro/box-cadastro.component';
 import { BoxSugestaoComponent } from './sharepage/box-sugestao/box-sugestao.component';
 import { TesteForComponent } from './sharepage/teste-for/teste-for.component';
-import { HeaderFeedProfessorComponent } from './sharepage/header-feed-professor/header-feed-professor.component';
 import { FeedbackProfessorComponent } from './pages/feedback-professor/feedback-professor.component';
 import { FeedbackDisciplinaComponent } from './pages/feedback-disciplina/feedback-disciplina.component';
 import { CadastroFeedbackComponent } from './pages/cadastro-feedback/cadastro-feedback.component';
@@ -34,10 +32,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
     ContatoComponent,
     FaqComponent,
     SobreNosComponent,
-    BoxCadastroComponent,
     BoxSugestaoComponent,
     TesteForComponent,
-    HeaderFeedProfessorComponent,
     FeedbackProfessorComponent,
     FeedbackDisciplinaComponent,
     CadastroFeedbackComponent,

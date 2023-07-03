@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit{
   constructor(private router: Router){}
 
   ngOnInit(): void {
-    
+
   }
 
   onClickContatos(){
@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit{
   }
 
   onClickCadastrarFeedback(){
-    this.router.navigateByUrl("feedback/disciplina");
+    this.router.navigateByUrl("cadastrar-feedback");
   }
 
   onClickConsultaProfessor(){

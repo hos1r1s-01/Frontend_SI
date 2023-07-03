@@ -1,57 +1,55 @@
-<app-navbar></app-navbar>
-
 <div class="container">
-  <span class="titulo">Cadastro de Feedback de {{isVisualizacaoDisciplina ? 'Disciplina' : 'Professor'}}</span>
+  <div class="card">
+    <span class="titulo">Cadastro de Feedback de {{isVisualizacaoDisciplina ? 'Disciplina' : 'Professor'}}</span>
 
-  <form *ngIf="isVisualizacaoDisciplina" [formGroup]="formCadastroDisciplina" (ngSubmit)="onSubmitDisciplina()" class="form">
-    <div class="linha">
-      <input class="input" type="text" placeholder="Código" formControlName="codigo"/>
-      <input class="input" type="text" placeholder="Ano.Semestre" formControlName="ano"/>
-    </div>
-    <textarea class="texto" formControlName="texto" placeholder="Informe aqui os assuntos abordados"></textarea>
-    <span class="lembrete">Lembre-se: Esse campo vai auxiliar outras pessoas.</span>
-    <div class="linha-avaliacao">
-      <div class="avaliacao">Avaliação geral:</div>
-      <select class="input" formControlName="avaliacao">
-        <option value="" disabled selected>Selecione</option>
-        <option value="1">1 estrela</option>
-        <option value="2">2 estrelas</option>
-        <option value="3">3 estrelas</option>
-        <option value="4">4 estrelas</option>
-        <option value="5">5 estrelas</option>
-      </select>
-    </div>
-    <button class="botao" type="submit">Continuar (1/2)</button>
-  </form>
+    <form *ngIf="isVisualizacaoDisciplina" [formGroup]="formCadastroDisciplina" (ngSubmit)="onSubmitDisciplina()" class="form">
+      <div class="linha">
+        <input class="input" type="text" placeholder="Código" formControlName="codigo"/>
+        <input class="input" type="text" placeholder="Ano.Semestre" formControlName="ano"/>
+      </div>
+      <textarea class="texto" formControlName="texto" placeholder="Informe aqui os assuntos abordados"></textarea>
+      <span class="lembrete">Lembre-se: Esse campo vai auxiliar outras pessoas.</span>
+      <div class="linha-avaliacao">
+        <div class="avaliacao">Avaliação geral:</div>
+        <select class="input" formControlName="avaliacao">
+          <option value="" disabled selected>Selecione</option>
+          <option value="1">1 estrela</option>
+          <option value="2">2 estrelas</option>
+          <option value="3">3 estrelas</option>
+          <option value="4">4 estrelas</option>
+          <option value="5">5 estrelas</option>
+        </select>
+      </div>
+      <button class="botao" type="submit">Continuar (1/2)</button>
+    </form>
 
-  <form *ngIf="!isVisualizacaoDisciplina" [formGroup]="formCadastroProfessor" (ngSubmit)="onSubmitProfessor()" class="form">
-    <div class="linha">
-      <input class="input" type="text" placeholder="Nome" formControlName="nome"/>
-      <input class="input" type="text" placeholder="Sobrenome" formControlName="sobrenome"/>
-    </div>
-    <div class="checkbok-group">
-      <input id="chamada" type="checkbox" class="box-chamada" name="chamada" formControlName="chamada">
-      <label for="chamada" class="chamada">Faz chamada?</label>
-      <input id="trabalho" type="checkbox" class="box-trabalho" name="trabalho" formControlName="trabalho">
-      <label for="trabalho" class="trabalho">Há trabalhos?</label>
-      <input id="prova" type="checkbox" class="box-prova" name="prova" formControlName="prova">
-      <label for="prova" class="prova">Há provas?</label>
-    </div>
-    <div class="linha-avaliacao">
-      <div class="avaliacao">Avaliação geral:</div>
-      <select class="input" formControlName="avaliacao">
-        <option value="" disabled selected>Selecione</option>
-        <option value="1">1 estrela</option>
-        <option value="2">2 estrelas</option>
-        <option value="3">3 estrelas</option>
-        <option value="4">4 estrelas</option>
-        <option value="5">5 estrelas</option>
-      </select>
-    </div>
-    <textarea class="texto" formControlName="explicacao" placeholder="Explique como funciona a metodologia, como funciona a avaliação, comente sobre a didática! Sinta-se livre."></textarea>
-    <button class="botao" type="submit">Finalizar (2/2)</button>
-  </form>
+    <form *ngIf="!isVisualizacaoDisciplina" [formGroup]="formCadastroProfessor" (ngSubmit)="onSubmitProfessor()" class="form">
+      <div class="linha">
+        <input class="input" type="text" placeholder="Nome" formControlName="nome"/>
+        <input class="input" type="text" placeholder="Sobrenome" formControlName="sobrenome"/>
+      </div>
+      <div class="checkbok-group">
+        <input id="chamada" type="checkbox" class="box-chamada" name="chamada" formControlName="chamada">
+        <label for="chamada" class="chamada">Faz chamada?</label>
+        <input id="trabalho" type="checkbox" class="box-trabalho" name="trabalho" formControlName="trabalho">
+        <label for="trabalho" class="trabalho">Há trabalhos?</label>
+        <input id="prova" type="checkbox" class="box-prova" name="prova" formControlName="prova">
+        <label for="prova" class="prova">Há provas?</label>
+      </div>
+      <div class="linha-avaliacao">
+        <div class="avaliacao">Avaliação geral:</div>
+        <select class="input" formControlName="avaliacao">
+          <option value="" disabled selected>Selecione</option>
+          <option value="1">1 estrela</option>
+          <option value="2">2 estrelas</option>
+          <option value="3">3 estrelas</option>
+          <option value="4">4 estrelas</option>
+          <option value="5">5 estrelas</option>
+        </select>
+      </div>
+      <textarea class="texto" formControlName="explicacao" placeholder="Explique como funciona a metodologia, como funciona a avaliação, comente sobre a didática! Sinta-se livre."></textarea>
+      <button class="botao" type="submit">Finalizar (2/2)</button>
+    </form>
 
+  </div>
 </div>
-
-<app-footer></app-footer>

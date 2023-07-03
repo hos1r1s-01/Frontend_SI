@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'contato', component:ContatoComponent},
   {path:'faq', component:FaqComponent},
   {path:'sobre-nos', component:SobreNosComponent},
-  {path:'feedback/disciplina', component:CadastroFeedbackComponent},
+  {path:'cadastrar-feedback', component:CadastroFeedbackComponent},
   {path: 'consultar/disciplina', component:FeedbackDisciplinaComponent},
   {path:'consultar/professor', component:FeedbackProfessorComponent}
 

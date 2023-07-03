@@ -11,7 +11,6 @@
 }
 .fundo{
     background-color: #19095A;
-    height: 80vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -22,7 +21,7 @@
     background-color: #060d3292;
     color: white;
     margin-top: 2%;
-    
+
 }
 .titulo_card{
     background-color: #060d32fe ;
