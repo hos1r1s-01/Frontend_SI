@@ -1,3 +1,36 @@
 <app-navbar></app-navbar>
 
-<app-header-feed-professor></app-header-feed-professor>
+<app-cabecalho titulo="FEEDBACKS SOBRE PROFESSORES"></app-cabecalho>
+
+<div class="container">
+  <form class="filtro" [formGroup]="formFiltroFeedbackProfessor" (ngSubmit)="onSubmit()">
+    <select class="input">
+      <option value="" disabled selected>Escolha um professor:</option>
+    </select>
+
+    <div class="checkbok-group">
+      <input id="chamada" type="checkbox" name="chamada" formControlName="chamada">
+      <label for="chamada" class="chamada">Faz chamada?</label>
+      <input id="trabalho" type="checkbox" name="trabalho" formControlName="trabalho">
+      <label for="trabalho" class="trabalho">Há trabalhos?</label>
+      <input id="prova" type="checkbox" name="prova" formControlName="prova">
+      <label for="prova" class="prova">Há provas?</label>
+      <button class="botao" type="submit">FILTRAR</button>
+    </div>
+
+  </form>
+
+  <div class="container-feedback" *ngFor="let feedback of feedbacks">
+    <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/147/147144.png"/>
+    <div class="conteudo">
+      <span class="user">Usuário 1</span>
+      <div class="box">{{feedback.explicacao}}</div>
+      <div class="footer">
+        <span>Chamada: {{feedback.chamada ? 'Sim' : 'Não'}}</span>
+        <span>Trabalhos: {{feedback.trabalho ? 'Sim' : 'Não'}}</span>
+        <span>Provas: {{feedback.prova ? 'Sim' : 'Não'}}</span>
+      </div>
+    </div>
+  </div>
+
+</div>
