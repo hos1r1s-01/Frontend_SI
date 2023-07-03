@@ -23,6 +23,7 @@ import { FeedbackDisciplinaComponent } from './pages/feedback-disciplina/feedbac
 import { CadastroFeedbackComponent } from './pages/cadastro-feedback/cadastro-feedback.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CabecalhoComponent } from './sharepage/cabecalho/cabecalho.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { CabecalhoComponent } from './sharepage/cabecalho/cabecalho.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,5 +6,6 @@ export class CadastroUsuario {
     senhaConfirmada: string = '';
     curso: string = '';
     semestre: string = '';
+    apelido: string = '';
     primeiroLogin: boolean = true;
 }

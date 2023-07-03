@@ -3,8 +3,8 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {Observable} from "rxjs";
 import {environment} from "../../environments/env";
-import {Disciplina} from "../forms/Disciplina";
-import {Professor} from "../forms/Professor";
+import {Disciplina} from "../forms/disciplina";
+import {Professor} from "../forms/professor";
 
 @Injectable({
   providedIn: 'root'

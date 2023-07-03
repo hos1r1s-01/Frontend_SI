@@ -2,7 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Router} from "@angular/router";
 import {FeedbackService} from "../../services/feedback.service";
-import {Professor} from "../../forms/Professor";
+import {Professor} from "../../forms/professor";
+import {FeedbackProfessor} from "../../forms/feedback-professor";
+import { faUserTie, faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-feedback-professor',
@@ -13,7 +15,10 @@ export class FeedbackProfessorComponent implements OnInit {
 
   formFiltroFeedbackProfessor!: FormGroup;
 
-  feedbacks!: Professor[];
+  feedbacks!: FeedbackProfessor[];
+
+  professorIcon = faUserTie;
+  avaliacaoIcon = faStar;
 
   constructor(private formBuilder: FormBuilder, private router: Router, private service: FeedbackService) {
 
@@ -39,13 +44,14 @@ export class FeedbackProfessorComponent implements OnInit {
 
   onSubmit() {
     const filtro: Professor = new Professor();
-    filtro.nomeCompleto = 'Fernando Chacon';
+    filtro.nomeCompleto = this.formFiltroFeedbackProfessor.value.professor;
     filtro.chamada = this.formFiltroFeedbackProfessor.value.chamada
     filtro.trabalho = this.formFiltroFeedbackProfessor.value.trabalho
     filtro.prova = this.formFiltroFeedbackProfessor.value.prova
 
     this.service.getFeedbackPorFiltro(filtro).subscribe(value => {
       this.feedbacks = value;
+      console.log(`Value: ${JSON.stringify(value)}`)
     })
   }
 

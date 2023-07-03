@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Router} from "@angular/router";
-import {Disciplina} from "../../forms/Disciplina";
-import {Professor} from "../../forms/Professor";
+import {Disciplina} from "../../forms/disciplina";
+import {Professor} from "../../forms/professor";
 import {FeedbackService} from "../../services/feedback.service";
 import {HttpHeaders} from "@angular/common/http";
 

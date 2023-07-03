@@ -4,8 +4,9 @@
 
 <div class="container">
   <form class="filtro" [formGroup]="formFiltroFeedbackProfessor" (ngSubmit)="onSubmit()">
-    <select class="input">
-      <option value="" disabled selected>Escolha um professor:</option>
+    <select class="input dropdown-formatar-texto" formControlName="professor">
+      <option class="dropdown-formatar-texto" value="" selected>Escolha um professor:</option>
+      <option class="dropdown-formatar-texto" value="Fernando Chacon">Fernando Chacon</option>
     </select>
 
     <div class="checkbok-group">
@@ -23,7 +24,11 @@
   <div class="container-feedback" *ngFor="let feedback of feedbacks">
     <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/147/147144.png"/>
     <div class="conteudo">
-      <span class="user">Usuário 1</span>
+      <div class="header">
+        <span>{{feedback.usuario.apelido | uppercase}}</span>
+        <span><fa-icon [icon]="professorIcon"></fa-icon> {{feedback.nomeCompleto}}</span>
+        <span><fa-icon [icon]="avaliacaoIcon"></fa-icon> {{feedback.avaliacao}}</span>
+      </div>
       <div class="box">{{feedback.explicacao}}</div>
       <div class="footer">
         <span>Chamada: {{feedback.chamada ? 'Sim' : 'Não'}}</span>
