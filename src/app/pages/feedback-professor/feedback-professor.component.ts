@@ -26,7 +26,7 @@ export class FeedbackProfessorComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm()
-    this.service.getTodosFeedbacks().subscribe(value => {
+    this.service.getTodosFeedbacksDeProfessor().subscribe(value => {
       console.log(`Value: ${JSON.stringify(value)}`)
       this.feedbacks = value;
     })
@@ -49,7 +49,7 @@ export class FeedbackProfessorComponent implements OnInit {
     filtro.trabalho = this.formFiltroFeedbackProfessor.value.trabalho
     filtro.prova = this.formFiltroFeedbackProfessor.value.prova
 
-    this.service.getFeedbackPorFiltro(filtro).subscribe(value => {
+    this.service.getFeedbackProfessorPorFiltro(filtro).subscribe(value => {
       this.feedbacks = value;
       console.log(`Value: ${JSON.stringify(value)}`)
     })

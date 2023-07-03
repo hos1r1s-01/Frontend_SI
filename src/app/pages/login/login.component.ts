@@ -33,8 +33,7 @@ export class LoginComponent {
       const usuario: CadastroUsuario = value;
       localStorage.setItem("TOKEN", value.token);
       localStorage.setItem("USUARIO", JSON.stringify(usuario));
-      const proximaRota = usuario.primeiroLogin ? 'primeiro-login' : 'tela-inicial'
-      this.router.navigateByUrl(proximaRota);
+      this.router.navigateByUrl('tela-inicial');
     });
   }
 

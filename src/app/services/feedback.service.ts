@@ -21,12 +21,20 @@ export class FeedbackService {
     return this.http.post(`${environment.API}/disciplina`, feedback, {headers: this.getAuthorizationFromHeader()});
   }
 
-  public getTodosFeedbacks(): Observable<any> {
+  public getTodosFeedbacksDeProfessor(): Observable<any> {
     return this.http.get(`${environment.API}/professor`, {headers: this.getAuthorizationFromHeader()});
   }
 
-  public getFeedbackPorFiltro(filtro: Professor): Observable<any> {
+  public getFeedbackProfessorPorFiltro(filtro: Professor): Observable<any> {
     return this.http.post(`${environment.API}/professor/filtro`, filtro, {headers: this.getAuthorizationFromHeader()});
+  }
+
+  public getTodosFeedbacksDeDisciplina(): Observable<any> {
+    return this.http.get(`${environment.API}/disciplina/obter-feedbacks`, {headers: this.getAuthorizationFromHeader()});
+  }
+
+  public getFeedbackDisciplinaPorFiltro(codigo: string): Observable<any> {
+    return this.http.get(`${environment.API}/disciplina/` + codigo, {headers: this.getAuthorizationFromHeader()});
   }
 
   private getAuthorizationFromHeader() : HttpHeaders {

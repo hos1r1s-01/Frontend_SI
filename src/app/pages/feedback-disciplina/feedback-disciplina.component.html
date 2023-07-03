@@ -1,1 +1,26 @@
-<p>feedback-disciplina works!</p>
+<app-navbar></app-navbar>
+
+<app-cabecalho titulo="FEEDBACKS DAS DISCIPLINAS"></app-cabecalho>
+
+<div class="container">
+  <form class="filtro" [formGroup]="formFiltroFeedbackDisciplina" (ngSubmit)="onSubmit()">
+    <select class="input dropdown-formatar-texto" formControlName="disciplina">
+      <option class="dropdown-formatar-texto" value="" selected>Escolha uma disciplina:</option>
+      <option class="dropdown-formatar-texto" value="CIC000">TP1</option>
+    </select>
+    <button class="botao" type="submit">FILTRAR</button>
+  </form>
+
+  <div class="container-feedback" *ngFor="let feedback of feedbacks">
+    <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/147/147144.png"/>
+    <div class="conteudo">
+      <div class="header">
+        <span>{{feedback.usuario.apelido | uppercase}}</span>
+      </div>
+      <div class="box">{{feedback.texto}}</div>
+    </div>
+  </div>
+
+</div>
+
+<app-footer></app-footer>

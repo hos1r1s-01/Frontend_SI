@@ -17,3 +17,11 @@ body {
 input, button, form {
   background: none;
 }
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

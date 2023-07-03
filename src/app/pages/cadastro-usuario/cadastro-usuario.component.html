@@ -1,1 +1,21 @@
-<app-box-cadastro></app-box-cadastro>
+<div class="container">
+  <div class="card">
+    <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/147/147144.png"/>
+    <h1 class="titulo">Cadastrar-se</h1>
+    <form class="container-form" [formGroup]="formCadastroUser" (ngSubmit)="onSubmit()">
+      <input class="input" type="text" placeholder="Nome Completo" formControlName="nome" [ngClass]="aplicarClasseCSSErro('nome')">
+      <input class="input" type="text" placeholder="Apelido" formControlName="apelido" [ngClass]="aplicarClasseCSSErro('apelido')">
+      <input class="input" type="text" placeholder="E-mail Universátrio" formControlName="email" [ngClass]="aplicarClasseCSSErro('email')">
+      <input class="input" type="text" placeholder="Matrícula" formControlName="matricula" [ngClass]="aplicarClasseCSSErro('matricula')"/>
+      <select class="input" formControlName="curso" [ngClass]="aplicarClasseCSSErro('curso')" style="width: 100%; color: black;">
+        <option value="" disabled>Curso</option>
+        <option value="COMPUTACAO">Ciências da Computação</option>
+        <option value="CIENCIAS_COMPUTACAO">Computação - Licenciatura</option>
+      </select>
+      <input class="input" type="password" placeholder="Senha" formControlName="senha" [ngClass]="aplicarClasseCSSErro('senha')">
+      <input class="input" type="password" placeholder="Confirme sua senha" formControlName="senhaConfirmada" [ngClass]="aplicarClasseCSSErro('senhaConfirmada')">
+      <button class="botao" type="submit">Cadastrar</button>
+    </form>
+    <span class="cadastrar">Já possui cadastro? <a routerLink="/auth">Autentique-se!</a></span>
+  </div>
+</div>

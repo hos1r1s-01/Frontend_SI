@@ -20,7 +20,7 @@ export class BoxCadastroComponent implements OnInit {
 
   createForm(cadastroUser: CadastroUsuario) {
     this.formCadastroUser = this.formbuilder.group({
-      nome: [cadastroUser.nome],
+      nome: [cadastroUser.nomeCompleto],
       email: [cadastroUser.email],
       senha: [cadastroUser.senha],
       senhaConfirmada: [cadastroUser.senhaConfirmada]
