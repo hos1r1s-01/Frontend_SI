@@ -1,16 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.content {
-  min-height: calc(100vh - 70px);
-}
-
 .menu-footer {
   background-color: #100f11;
-  height: 30px;
-  font-family: "Inter", sans-serif;
   font-weight: 600;
+  padding: 20px 0;
   color: white;
-  font-size: 80%;
-  padding-top: 20px;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
