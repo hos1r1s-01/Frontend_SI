@@ -1,5 +1,10 @@
-<app-navbar></app-navbar>
-
-<app-box-sugestao></app-box-sugestao>
-
-<app-footer></app-footer>
+<h1 class="titulo">Tem alguma sugestão?</h1>
+<div class="hitbox">
+  <form [formGroup]="formSugestao" (ngSubmit)="onSubmit()">
+    <div class="box-sugestao">
+                <textarea class="sugestao" formControlName="texto"
+                          placeholder="Coloque aqui sua sugestão. Ex: Funcionalidade para a plataforma, carreira profissional a ser adicionada..."></textarea>
+    </div>
+    <button type="submit" class="botao">Enviar</button>
+  </form>
+</div>
