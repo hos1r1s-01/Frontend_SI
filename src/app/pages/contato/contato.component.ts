@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Sugestao} from "../../forms/sugestao";
+import {Route, Router} from "@angular/router";
 
 @Component({
   selector: 'app-contato',
@@ -11,7 +12,7 @@ export class ContatoComponent implements OnInit {
 
   formSugestao!: FormGroup;
 
-  constructor(private formbuilder: FormBuilder) {
+  constructor(private formbuilder: FormBuilder, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -26,6 +27,7 @@ export class ContatoComponent implements OnInit {
 
   onSubmit() {
     console.log(this.formSugestao.value)
+    this.router.navigateByUrl('/tela-inicial')
   }
 
 }
