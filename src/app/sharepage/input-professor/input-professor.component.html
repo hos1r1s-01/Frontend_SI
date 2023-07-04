@@ -1,5 +1,5 @@
 <div [formGroup]="formGroup">
-  <select class="input dropdown-formatar-texto" formControlName="{{formName}}" style="color: black;">
+  <select class="input dropdown-formatar-texto" formControlName="{{formName}}" style="color: black;  width: 100%;">
     <option class="dropdown-formatar-texto" value="" selected>Escolha um professor:</option>
     <option class="dropdown-formatar-texto" *ngFor="let professor of professores" value="{{professor.nomeCompleto}}">{{professor.nomeCompleto}}</option>
   </select>

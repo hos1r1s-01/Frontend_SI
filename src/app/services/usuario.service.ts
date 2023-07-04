@@ -16,4 +16,12 @@ export class UsuarioService {
     return this.http.post(`${environment.API}/usuario`, usuario);
   }
 
+  public editarUsuario(usuario: CadastroUsuario): Observable<any> {
+    return this.http.put(`${environment.API}/usuario/${usuario.matricula}`, usuario);
+  }
+
+  public obterUsuario(matricula: string): Observable<any> {
+    return this.http.get(`${environment.API}/usuario/${matricula}`);
+  }
+
 }

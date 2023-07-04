@@ -12,6 +12,7 @@
 body {
   background-color: #19095A;
   height: 100vh;
+  overflow-y: hidden;
 }
 
 input, button, form {

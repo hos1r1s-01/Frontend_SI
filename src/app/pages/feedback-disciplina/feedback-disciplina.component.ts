@@ -4,6 +4,7 @@ import {FeedbackProfessor} from "../../forms/feedback-professor";
 import {Router} from "@angular/router";
 import {FeedbackService} from "../../services/feedback.service";
 import {FeedbackDisciplina} from "../../forms/feedback-disciplina";
+import { faUserTie, faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-feedback-disciplina',
@@ -13,8 +14,10 @@ import {FeedbackDisciplina} from "../../forms/feedback-disciplina";
 export class FeedbackDisciplinaComponent implements OnInit {
 
   formFiltroFeedbackDisciplina!: FormGroup;
-
   feedbacks!: FeedbackDisciplina[];
+
+  professorIcon = faUserTie;
+  avaliacaoIcon = faStar;
 
   constructor(private formBuilder: FormBuilder, private router: Router, private service: FeedbackService) {
 
@@ -23,7 +26,6 @@ export class FeedbackDisciplinaComponent implements OnInit {
   ngOnInit(): void {
     this.createForm()
     this.service.getTodosFeedbacksDeDisciplina().subscribe(value => {
-      console.log("Value =>" + JSON.stringify(value))
       this.feedbacks = value;
     })
   }

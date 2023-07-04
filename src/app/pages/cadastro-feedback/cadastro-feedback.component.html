@@ -24,7 +24,7 @@
     </form>
 
     <form *ngIf="!isVisualizacaoDisciplina" [formGroup]="formCadastroProfessor" (ngSubmit)="onSubmitProfessor()" class="form">
-      <app-input-professor [formGroup]="formCadastroProfessor" formName="nome" ></app-input-professor>
+      <app-input-professor [formGroup]="formCadastroProfessor" formName="nome" style="width: 100%;"></app-input-professor>
       <div class="checkbok-group">
         <input id="chamada" type="checkbox" class="box-chamada" name="chamada" formControlName="chamada">
         <label for="chamada" class="chamada">Faz chamada?</label>

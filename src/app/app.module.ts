@@ -21,7 +21,9 @@ import { CabecalhoComponent } from './sharepage/cabecalho/cabecalho.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InputProfessorComponent } from './sharepage/input-professor/input-professor.component'
 import { InputDisciplinaComponent } from './sharepage/input-disciplina/input-disciplina.component';
-import { InputSemestreComponent } from './sharepage/input-semestre/input-semestre.component'
+import { InputSemestreComponent } from './sharepage/input-semestre/input-semestre.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
+import { InputCustomComponent } from './sharepage/input-custom/input-custom.component'
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { InputSemestreComponent } from './sharepage/input-semestre/input-semestr
     InputProfessorComponent,
     InputProfessorComponent,
     InputDisciplinaComponent,
-    InputSemestreComponent
+    InputSemestreComponent,
+    PerfilComponent,
+    InputCustomComponent
   ],
   imports: [
     BrowserModule,

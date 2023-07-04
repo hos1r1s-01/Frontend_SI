@@ -1,6 +1,6 @@
 <div [formGroup]="formGroup">
-    <select class="input dropdown-formatar-texto" formControlName="{{formName}}" style="color: black;">
-      <option class="dropdown-formatar-texto" value="" selected>Escolha uma disciplina:</option>
+    <select class="input dropdown-formatar-texto" formControlName="{{formName}}" style="color: black; width: 100%;">
+      <option class="dropdown-formatar-texto" value="" selected>Escolha o semestre:</option>
       <option class="dropdown-formatar-texto" *ngFor="let anoSemestre of anoSemestres" value="{{anoSemestre.anoSemestre}}">{{anoSemestre.anoSemestre}}</option>
     </select>
 </div>

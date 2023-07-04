@@ -1,10 +1,14 @@
-<h1 class="titulo">Tem alguma sugestão?</h1>
-<div class="hitbox">
-  <form [formGroup]="formSugestao" (ngSubmit)="onSubmit()">
-    <div class="box-sugestao">
+<div class="container">
+  <div class="titulo">
+    <span>Tem alguma sugestão?</span>
+  </div>
+  <div class="hitbox">
+    <form [formGroup]="formSugestao" (ngSubmit)="onSubmit()">
+      <div class="box-sugestao">
                 <textarea class="sugestao" formControlName="texto"
-                          placeholder="Coloque aqui sua sugestão. Ex: Funcionalidade para a plataforma, carreira profissional a ser adicionada..."></textarea>
-    </div>
-    <button type="submit" class="botao">Enviar</button>
-  </form>
+                          placeholder="Coloque aqui sua sugestão."></textarea>
+      </div>
+      <button type="submit" class="botao">Enviar</button>
+    </form>
+  </div>
 </div>

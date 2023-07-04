@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 70%;
+  height: 100%;
 }
 
 .direcionar{
@@ -17,6 +17,6 @@
   font-weight: bolder;
 }
 .unb-imagem{
-  height: 60%;
+  height: 50%;
   cursor: pointer;
 }

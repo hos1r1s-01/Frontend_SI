@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {Disciplina} from "../../forms/disciplina";
 import {Professor} from "../../forms/professor";
@@ -29,10 +29,10 @@ export class CadastroFeedbackComponent {
 
   createForm() {
     this.formCadastroDisciplina = this.formbuilder.group({
-      codigo: [],
-      ano: [],
-      texto: [],
-      avaliacao: []
+      codigo: ['', [Validators.required]],
+      ano: ['', [Validators.required]],
+      texto: ['', [Validators.required]],
+      avaliacao: ['', [Validators.required]]
     })
 
     this.formCadastroProfessor = this.formbuilder.group({

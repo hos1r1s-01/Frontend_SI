@@ -11,6 +11,8 @@
     <div class="conteudo">
       <div class="header">
         <span>{{feedback.usuario.apelido | uppercase}}</span>
+        <span><fa-icon [icon]="professorIcon"></fa-icon> {{feedback.disciplina.nome}}</span>
+        <span><fa-icon [icon]="avaliacaoIcon"></fa-icon> {{feedback.avaliacao}}</span>
       </div>
       <div class="box">{{feedback.texto}}</div>
     </div>

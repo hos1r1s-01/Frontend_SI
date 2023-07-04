@@ -37,4 +37,9 @@ export class NavbarComponent implements OnInit{
   onClickConsultaDisciplina(){
     this.router.navigateByUrl("consultar/disciplina");
   }
+
+  onClickPerfil(){
+    this.router.navigateByUrl("perfil");
+  }
+
 }
