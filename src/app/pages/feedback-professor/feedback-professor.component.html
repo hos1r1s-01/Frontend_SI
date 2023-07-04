@@ -2,10 +2,11 @@
 
 <div class="container">
   <form class="filtro" [formGroup]="formFiltroFeedbackProfessor" (ngSubmit)="onSubmit()">
-    <select class="input dropdown-formatar-texto" formControlName="professor">
-      <option class="dropdown-formatar-texto" value="" selected>Escolha um professor:</option>
-      <option class="dropdown-formatar-texto" value="Fernando Chacon">Fernando Chacon</option>
-    </select>
+    <app-input-professor [formGroup]="formFiltroFeedbackProfessor"></app-input-professor>
+<!--    <select class="input dropdown-formatar-texto" formControlName="professor">-->
+<!--      <option class="dropdown-formatar-texto" value="" selected>Escolha um professor:</option>-->
+<!--      <option class="dropdown-formatar-texto" value="Fernando Chacon">Fernando Chacon</option>-->
+<!--    </select>-->
 
     <div class="checkbok-group">
       <input id="chamada" type="checkbox" name="chamada" formControlName="chamada">
