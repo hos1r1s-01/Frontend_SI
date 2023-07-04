@@ -1,0 +1,46 @@
+<app-cabecalho titulo="Olá, {{usuario.nomeCompleto}}!"></app-cabecalho>
+
+<div class="container">
+  <div class="conteudo">
+    <form class="form" [formGroup]="formPerfil">
+      <div class="esquerda">
+        <h2>Suas informações:</h2>
+        <app-input-custom
+          [disabled]="true"
+          label="Matricula:"
+          formName="matricula" [formGroup]="formPerfil"></app-input-custom>
+        <app-input-custom
+          label="E-mail Universitário:"
+          formName="email" [formGroup]="formPerfil"></app-input-custom>
+        <app-input-custom
+          [disabled]="true"
+          label="Curso:"
+          formName="curso" [formGroup]="formPerfil"></app-input-custom>
+        <app-input-custom
+          [disabled]="true"
+          label="Apelido:"
+          formName="apelido" [formGroup]="formPerfil"></app-input-custom>
+      </div>
+
+      <div class="direita">
+        <h2>Trocar Senha:</h2>
+        <app-input-custom
+          type="password"
+          label="Senha atual:"
+          formName="senha" [formGroup]="formPerfil"></app-input-custom>
+        <app-input-custom
+          type="password"
+          label="Nova senha:"
+          formName="novaSenha" [formGroup]="formPerfil"></app-input-custom>
+        <app-input-custom
+          type="password"
+          label="Confirmar senha:"
+          formName="confirmarSenha" [formGroup]="formPerfil"></app-input-custom>
+      </div>
+    </form>
+    <div style="display: flex; flex-direction:column; justify-content: center; align-items: center; margin-top: 30px">
+      <button class="botao" (click)="onSubmit()">SALVAR INFORMAÇÕES</button>
+      <button class="botao" (click)="logout()">SAIR</button>
+    </div>
+  </div>
+</div>
