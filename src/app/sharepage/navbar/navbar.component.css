@@ -13,6 +13,18 @@ li {
   color: white;
 }
 
+<<<<<<< HEAD
+=======
+.link:active, .link:visited {
+  color: inherit;
+}
+
+.logo:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+>>>>>>> 9c0bde8 (novos-inputs)
 nav,
 ul {
   display: flex;

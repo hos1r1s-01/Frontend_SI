@@ -19,7 +19,13 @@ import { CadastroFeedbackComponent } from './pages/cadastro-feedback/cadastro-fe
 import {HttpClientModule} from "@angular/common/http";
 import { CabecalhoComponent } from './sharepage/cabecalho/cabecalho.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+<<<<<<< HEAD
 import { InputProfessorComponent } from './sharepage/input-professor/input-professor.component'
+=======
+import { InputProfessorComponent } from './sharepage/input-professor/input-professor.component';
+import { InputDisciplinaComponent } from './sharepage/input-disciplina/input-disciplina.component';
+import { InputSemestreComponent } from './sharepage/input-semestre/input-semestre.component'
+>>>>>>> 9c0bde8 (novos-inputs)
 
 @NgModule({
   declarations: [
@@ -37,7 +43,13 @@ import { InputProfessorComponent } from './sharepage/input-professor/input-profe
     FeedbackDisciplinaComponent,
     CadastroFeedbackComponent,
     CabecalhoComponent,
+<<<<<<< HEAD
     InputProfessorComponent
+=======
+    InputProfessorComponent,
+    InputDisciplinaComponent,
+    InputSemestreComponent
+>>>>>>> 9c0bde8 (novos-inputs)
   ],
   imports: [
     BrowserModule,
