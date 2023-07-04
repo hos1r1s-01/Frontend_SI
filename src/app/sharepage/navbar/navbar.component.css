@@ -13,8 +13,6 @@ li {
   color: white;
 }
 
-<<<<<<< HEAD
-=======
 .link:active, .link:visited {
   color: inherit;
 }
@@ -24,7 +22,6 @@ li {
   opacity: 0.8;
 }
 
->>>>>>> 9c0bde8 (novos-inputs)
 nav,
 ul {
   display: flex;

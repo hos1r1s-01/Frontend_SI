@@ -37,7 +37,6 @@ export class CadastroFeedbackComponent {
 
     this.formCadastroProfessor = this.formbuilder.group({
       nome: [],
-      sobrenome: [],
       chamada: [],
       trabalho: [],
       prova: [],
@@ -56,7 +55,7 @@ export class CadastroFeedbackComponent {
   }
 
   onSubmitProfessor(){
-    this.professor.nomeCompleto = this.formCadastroProfessor.value.nome + " " + this.formCadastroProfessor.value.sobrenome
+    this.professor.nomeCompleto = this.formCadastroProfessor.value.nome
     this.professor.trabalho = this.formCadastroProfessor.value.trabalho
     this.professor.prova = this.formCadastroProfessor.value.prova
     this.professor.chamada = this.formCadastroProfessor.value.chamada

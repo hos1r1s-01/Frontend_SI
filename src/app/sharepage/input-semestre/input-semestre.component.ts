@@ -10,7 +10,7 @@ import { FormControlName, FormGroup } from '@angular/forms';
 export class InputSemestreComponent implements OnInit{
 
   @Input() formGroup!: FormGroup;
-  @Input() formControlName: string = "anoSemestre";
+  @Input() formName: string = "ano";
 
   anoSemestres: AnoSemestre[] = [];
 

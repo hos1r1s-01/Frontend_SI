@@ -2,10 +2,7 @@
 
 <div class="container">
   <form class="filtro" [formGroup]="formFiltroFeedbackDisciplina" (ngSubmit)="onSubmit()">
-    <select class="input dropdown-formatar-texto" formControlName="disciplina">
-      <option class="dropdown-formatar-texto" value="" selected>Escolha uma disciplina:</option>
-      <option class="dropdown-formatar-texto" value="CIC000">TP1</option>
-    </select>
+    <app-input-disciplina [formGroup]="formFiltroFeedbackDisciplina"></app-input-disciplina>
     <button class="botao" type="submit">FILTRAR</button>
   </form>
 

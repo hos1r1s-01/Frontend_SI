@@ -4,8 +4,8 @@
 
     <form *ngIf="isVisualizacaoDisciplina" [formGroup]="formCadastroDisciplina" (ngSubmit)="onSubmitDisciplina()" class="form">
       <div class="linha">
-        <input class="input" type="text" placeholder="Código" formControlName="codigo"/>
-        <input class="input" type="text" placeholder="Ano.Semestre" formControlName="ano"/>
+        <app-input-disciplina [formGroup]="formCadastroDisciplina" formName="codigo"></app-input-disciplina>
+        <app-input-semestre [formGroup]="formCadastroDisciplina"></app-input-semestre>
       </div>
       <textarea class="texto" formControlName="texto" placeholder="Informe aqui os assuntos abordados"></textarea>
       <span class="lembrete">Lembre-se: Esse campo vai auxiliar outras pessoas.</span>
@@ -24,10 +24,7 @@
     </form>
 
     <form *ngIf="!isVisualizacaoDisciplina" [formGroup]="formCadastroProfessor" (ngSubmit)="onSubmitProfessor()" class="form">
-      <div class="linha">
-        <input class="input" type="text" placeholder="Nome" formControlName="nome"/>
-        <input class="input" type="text" placeholder="Sobrenome" formControlName="sobrenome"/>
-      </div>
+      <app-input-professor [formGroup]="formCadastroProfessor" formName="nome" ></app-input-professor>
       <div class="checkbok-group">
         <input id="chamada" type="checkbox" class="box-chamada" name="chamada" formControlName="chamada">
         <label for="chamada" class="chamada">Faz chamada?</label>
